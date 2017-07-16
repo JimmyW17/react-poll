@@ -57,3 +57,4 @@ gem 'react_on_rails'
 gem 'mini_racer', platforms: :ruby
 gem 'webpacker_lite'
 gem 'devise'
+gem 'paperclip', '~> 4.2'
