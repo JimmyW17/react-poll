@@ -58,3 +58,5 @@ gem 'mini_racer', platforms: :ruby
 gem 'webpacker_lite'
 gem 'devise'
 gem 'paperclip', '~> 4.2'
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+gem 'jquery-rails'
