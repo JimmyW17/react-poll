@@ -12,6 +12,12 @@
   <% end %>
 
   <div class="actions">
+    <%= label_tag :title %><br>
+    <%= form.text_field :title %><br>
+    <%= label_tag :content %><br>
+    <%= form.text_area :content %><br>
+    <%= label_tag :choices %><br>
+    <%= form.text_field :choices %><br>
     <%= form.submit %>
   </div>
 <% end %>

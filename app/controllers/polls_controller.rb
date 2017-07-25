@@ -14,7 +14,8 @@ class PollsController < ApplicationController
 
   # GET /polls/new
   def new
-    @poll = Poll.new
+    @user = current_user if current_user
+    @poll = @user.polls.new
   end
 
   # GET /polls/1/edit
@@ -24,7 +25,8 @@ class PollsController < ApplicationController
   # POST /polls
   # POST /polls.json
   def create
-    @poll = Poll.new(poll_params)
+    @user = current_user if current_user
+    @poll = @user.polls.new(poll_params)
 
     respond_to do |format|
       if @poll.save

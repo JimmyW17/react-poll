@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717000933) do
+ActiveRecord::Schema.define(version: 20170724212855) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "poll_id"
@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 20170717000933) do
 
   create_table "polls", force: :cascade do |t|
     t.string "title"
-    t.integer "choices"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.string "choices"
   end
 
   create_table "users", force: :cascade do |t|
