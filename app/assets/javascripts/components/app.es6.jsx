@@ -2,7 +2,6 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      showHome: true,
       homeActive: "active",
       signedIn: false
     }
@@ -10,7 +9,7 @@ class App extends React.Component {
 
   componentWillMount() {
     if (this.props.page === 'home') {
-      this.setState({showHome: true, homeActive: "active"})
+      this.setState({homeActive: "active"})
     }
     if (this.props.signed_in) {
       this.setState({signedIn: true})
