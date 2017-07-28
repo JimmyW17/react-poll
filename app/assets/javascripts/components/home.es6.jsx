@@ -7,7 +7,7 @@ class Home extends React.Component {
         </div>
         <div className="row">
           <div className="col-md-12">
-            <_Button/>
+            <_Button destination="/polls/new" name="Create Poll"/>
           </div>
         </div>
       </div>
