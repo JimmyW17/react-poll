@@ -1,8 +1,15 @@
 class Home extends React.Component {
-  render () {
+  render() {
     return (
-      <div>
-        <div>Home jsx</div>
+      <div className="container">
+        <div className="row text-center">
+          <div className="col-md-12">Home jsx</div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <_Button/>
+          </div>
+        </div>
       </div>
     );
   }
