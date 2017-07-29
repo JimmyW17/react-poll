@@ -1,16 +1,12 @@
-class App extends React.Component {
+class Home extends React.Component {
   constructor() {
     super()
     this.state = {
-      homeActive: "active",
       signedIn: false
     }
   }
 
   componentWillMount() {
-    if (this.props.page === 'home') {
-      this.setState({homeActive: "active"})
-    }
     if (this.props.signed_in) {
       this.setState({signedIn: true})
     }
@@ -18,9 +14,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container-fluid">
         <Nav signedIn={this.state.signedIn}/>
-        <Home signedIn={this.state.signedIn}/>
+        <_Button destination="/polls/new" name="Create Poll"/>
       </div>
     )
   }
