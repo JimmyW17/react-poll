@@ -1,0 +1,7 @@
+<%= form_for [@poll, @choice], method: :get do |form| %>
+<div class="actions">
+  <%= label_tag :choice %><br>
+  <%= form.text_field :choice %><br>
+  <%= form.submit %>
+</div>
+<% end %>

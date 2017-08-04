@@ -30,7 +30,8 @@ class PollsController < ApplicationController
 
     respond_to do |format|
       if @poll.save
-        format.html { redirect_to @poll, notice: 'Poll was successfully created.' }
+        # format.html { redirect_to @poll, notice: 'Poll was successfully created.' }
+        format.html { redirect_to new_poll_choice_path(@user.polls.last) }
         format.json { render :show, status: :created, location: @poll }
       else
         format.html { render :new }
@@ -72,6 +73,6 @@ class PollsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def poll_params
       # params.fetch(:poll, {})
-      params.require(:poll).permit(:title, :choices)
+      params.require(:poll).permit(:title)
     end
 end
